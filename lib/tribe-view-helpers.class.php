@@ -510,7 +510,8 @@ if (!class_exists('TribeEventsViewHelpers')) {
 			$months = $tribe_ecp->monthNames( true );
 			$options = '';
 			if (empty($date)) {
-				$month = ( date_i18n('j') == date_i18n('t') ) ? date('F', time() + 86400) : date_i18n('F');
+				// If it's the last day of the month (locally), we use the next month.
+				$month = ( date('j') == date('t') ) ? date('F', time() + 86400) : date('F');
 			} else {
 				$month = date('F', strtotime($date));
 			}
