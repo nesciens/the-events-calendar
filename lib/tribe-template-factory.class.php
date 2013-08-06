@@ -238,7 +238,7 @@ if( !class_exists('Tribe_Template_Factory') ) {
 					}
 				}
 				if( tribe_is_day() ) {
-					TribeEvents::setNotice( 'events-not-found', sprintf( __( 'No events scheduled for <strong>%s</strong>. Please try another day.', 'tribe-events-calendar' ), date_i18n( 'F d, Y', strtotime( get_query_var( 'eventDate' ) ) ) ) );
+					TribeEvents::setNotice( 'events-not-found', sprintf( __( 'No events scheduled for <strong>%s</strong>. Please try another day.', 'tribe-events-calendar' ), date_i18n( __('F d, Y', "tribe-events-calendar"), strtotime( get_query_var( 'eventDate' ) ) ) ) );
 				} elseif( tribe_is_upcoming() ) {
 					$date = date('Y-m-d', strtotime($tribe_ecp->date));
 					if ( $date == date('Y-m-d') ) {
