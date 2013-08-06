@@ -482,7 +482,7 @@ if ( !class_exists( 'TribeSettings' ) ) {
 				}
 
 				if ( count( $errors ) ) {
-					$message = ( isset( $this->major_error ) && $this->major_error ) ? __( 'None of your settings were saved. Please try again.' ) : _n( 'The above setting was not saved. Other settings were successfully saved.', 'The above settings were not saved. Other settings were successfully saved.', $count, 'tribe-events-calendar' );
+					$message = ( isset( $this->major_error ) && $this->major_error ) ? __( 'None of your settings were saved. Please try again.', 'tribe-event-calendar') : _n( 'The above setting was not saved. Other settings were successfully saved.', 'The above settings were not saved. Other settings were successfully saved.', $count, 'tribe-events-calendar' );
 				}
 
 				$output .= '</ul><p>'.$message.'</p></div>';
