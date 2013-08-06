@@ -1426,7 +1426,7 @@ if ( !class_exists( 'TribeEvents' ) ) {
 				/* translators: %s: date and time of the revision */
 				5 => isset($_GET['revision']) ? sprintf( __('Venue restored to revision from %s', 'tribe-events-calendar'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
 				6 => sprintf( __('Venue published. <a href="%s">View venue</a>', 'tribe-events-calendar'), esc_url( get_permalink($post_ID) ) ),
-				7 => __('Venue saved.'),
+				7 => __('Venue saved.', 'tribe-events-calendar'),
 				8 => sprintf( __('Venue submitted. <a target="_blank" href="%s">Preview venue</a>', 'tribe-events-calendar'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
 				9 => sprintf( __('Venue scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview venue</a>', 'tribe-events-calendar'),
 				// translators: Publish box date format, see http://php.net/date
@@ -1443,7 +1443,7 @@ if ( !class_exists( 'TribeEvents' ) ) {
 				/* translators: %s: date and time of the revision */
 				5 => isset($_GET['revision']) ? sprintf( __('Organizer restored to revision from %s', 'tribe-events-calendar'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
 				6 => sprintf( __('Organizer published. <a href="%s">View organizer</a>', 'tribe-events-calendar'), esc_url( get_permalink($post_ID) ) ),
-				7 => __('Organizer saved.'),
+				7 => __('Organizer saved.', 'tribe-events-calendar'),
 				8 => sprintf( __('Organizer submitted. <a target="_blank" href="%s">Preview organizer</a>', 'tribe-events-calendar'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
 				9 => sprintf( __('Organizer scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview organizer</a>', 'tribe-events-calendar'),
 				// translators: Publish box date format, see http://php.net/date
@@ -3701,7 +3701,7 @@ if ( !class_exists( 'TribeEvents' ) ) {
 		 * @return void
 		 */
 		public function dashboardWidget() {
-			wp_add_dashboard_widget( 'tribe_dashboard_widget', __( 'News from Modern Tribe' ), array( $this, 'outputDashboardWidget' ) );
+			wp_add_dashboard_widget( 'tribe_dashboard_widget', __( 'News from Modern Tribe', 'tribe-events-calendar' ), array( $this, 'outputDashboardWidget' ) );
 		}
 
 		/**
