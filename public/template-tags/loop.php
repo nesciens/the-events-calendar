@@ -169,7 +169,7 @@ if( class_exists( 'TribeEvents' ) ) {
 		if( tribe_is_month() ){
 			$title = sprintf( '%s%s',
 				__( 'Events for ', 'tribe-events-calendar' ),
-				date_i18n( 'F Y', strtotime(tribe_get_month_view_date()) )
+				date_i18n( __('F Y', 'tribe-events-calendar'), strtotime(tribe_get_month_view_date()) )
 				);
 		}
 

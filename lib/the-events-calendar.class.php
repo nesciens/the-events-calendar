@@ -1005,7 +1005,7 @@ if ( !class_exists( 'TribeEvents' ) ) {
 					break;
 				case 'month':
 					if(get_query_var('eventDate')){
-						$title_date = date_i18n("F Y",strtotime(get_query_var('eventDate')));
+						$title_date = date_i18n(__("F Y", "tribe-events-calendar"),strtotime(get_query_var('eventDate')));
 						$new_title = apply_filters( 'tribe_month_grid_view_title', sprintf(__("Events for %s", 'tribe-events-calendar'), $title_date ) . ' ' . $sep . ' ' . $title, $sep, $title_date );
 					}else{
 						$new_title = apply_filters( 'tribe_events_this_month_title', sprintf(__("Events this month", 'tribe-events-calendar'), get_query_var('eventDate') ) . ' ' . $sep . ' ' . $title, $sep );
