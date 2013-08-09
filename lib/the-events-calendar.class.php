@@ -1012,7 +1012,7 @@ if ( !class_exists( 'TribeEvents' ) ) {
 					}
 					break;
 				case 'day':
-					$title_date = date_i18n("l, F jS Y",strtotime(get_query_var('eventDate')));
+					$title_date = date_i18n(get_option('date_format'),strtotime(get_query_var('eventDate')));
 					$new_title = apply_filters( 'tribe_events_day_view_title', sprintf(__("Events for %s", 'tribe-events-calendar'), $title_date) . ' ' . $sep . ' ', $sep, $title_date );
 					break;
 				default:
